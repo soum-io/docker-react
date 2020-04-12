@@ -4,8 +4,8 @@ services:
     - docker
 
 before_install:
-    - docker build -t IMAGE_TO_TEST -f Dockerfile.dev .
+    - docker build -t imageToTest -f Dockerfile.dev .
 
 script:
-    - docker run -e CI=true IMAGE_TO_TEST npm run test
+    - docker run -e CI=true imageToTest npm run test
       
